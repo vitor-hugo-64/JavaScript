@@ -1,0 +1,10 @@
+COMANDOS GIT
+
+git init: Cria um novo repositório local git
+git status: Verifica o estado atual do projeto, isso quer dizer que todo tipo de alteração e arquivo que ainda não foi salvo ele ira mostrar.
+git add <nome do arquivo>: Coloca determinado arquivo em estado de rastreamento, para mais tarde poder ser salvo.
+git log: Verifica o histórico de commits realizados.
+git remote add origin <link do repositorio>: Adiciona um repositório remoto.
+git push origin master: Empurra os arquivos para o repositorio remoto.
+git pull origin master: Puxa todas as alterações que existem no seu repositório remoto e que ainda não estão no repositório local.
+git diff: serve para

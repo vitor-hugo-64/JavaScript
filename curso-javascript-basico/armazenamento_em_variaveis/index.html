@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Variáveis </title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		// ATRIBUIR VALOR A UMA VARIÁVEL
+		var nome = 'Vitor Hugo';
+		document.write(nome);
+		document.write('<br>')
+
+		// MUDAR O VALOR DA VARIÁVEL
+		var numero = 2;
+		numero += 2;
+		document.write(numero);
+		document.write('<br>');
+
+		//IMPRIMIR VALORES DIRETAMENTE NO CONSOLE DO NAVEGADOR
+		console.log(nome);
+		console.log(numero);
+
+		// PRINCIPAIS TIPOS DE DADOS EM JAVASCRIPT
+		// string
+		var string = 'string';
+		console.log(string);
+		// numero
+		var number = 45;
+		console.log(number);
+		// booleano
+		var boleano = true;
+		console.log(boleano);
+
+		// SUBSTITUIR O CONTEUDO DE UMA STRING
+		var nome1 = "Joao Pedro";
+		console.log(nome1)
+		// verifica o tamanho da variável
+		nome1.length;
+		// substitui o segundo nome
+		nome2 = nome1.replace("Pedro","Vitor");
+		console.log(nome2);
+
+		//NUMEROS E CONVERSÕES EM JAVASCRIPT
+		//possui um unico tipo para todos os tipos de numeros
+		var num1 = 50;
+		var num2 = 5.1;
+		// variável string
+		var textoNum = "51";
+		console.log(textoNum)
+		// conversão da variável string em um número
+		var float = parseFloat(textoNum);
+		console.log(float);
+		// controla quantas casas aparecerão depois da vírgula, mas essa conversão deve ser capturada em outra variável
+		var float2 = float.toFixed(2);
+		console.log(float2);
+
+		// CONCATENAÇÕES DE STRING
+		var n1 = "Vitor";
+		var n2 = "Hugo";
+		var n3 = (n1+n2);
+		console.log(n3);
+
+		// CONCATENAÇÕES DE STRING COM FLOAT
+		var valor1 = "string";
+		var valor2 = 5;
+		var valor3 = (valor1+valor2);
+		console.log(valor3);
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
