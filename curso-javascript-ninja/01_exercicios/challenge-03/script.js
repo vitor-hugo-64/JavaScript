@@ -98,6 +98,106 @@
 	*/
 	console.log(pessoa.nomeCompleto());
 
+	/*
+		Qual a idade da pessoa? (Use a instrução para responder e comentários
+		inline ao lado da instrução para mostrar qual foi a resposta retornada)
+	*/
+	console.log(pessoa.mostrarIdade());
+
+	/*
+		Qual o peso da pessoa? (Use a instrução para responder e comentários
+		inline ao lado da instrução para mostrar qual foi a resposta retornada)
+	*/
+	console.log(pessoa.mostrarPeso());
+
+	/*
+		Qual a altura da pessoa? (Use a instrução para responder e comentários
+		inline ao lado da instrução para mostrar qual foi a resposta retornada)
+	*/
+	console.log(pessoa.mostrarAltura());
+
+	/*
+		Faça a `pessoa` fazer 3 aniversários.
+	*/
+	pessoa.fazerAniversario();
+	pessoa.fazerAniversario();
+	pessoa.fazerAniversario();
+
+	/*
+		Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
+		comentários inline ao lado da instrução para mostrar qual foi a resposta
+		retornada)
+	*/
+	console.log(pessoa.mostrarIdade());
+
+	/*
+		Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
+		com metragens diferentes passadas por parâmetro.
+	*/
+	pessoa.andar(5);
+	pessoa.andar(4);
+	pessoa.andar(9);
+
+	/*
+		A pessoa ainda está andando? (Use a instrução para responder e comentários
+		inline ao lado da instrução para mostrar qual foi a resposta retornada)
+	*/
+	console.log(pessoa.andando);
+
+	/*
+		Se a pessoa ainda está andando, faça-a parar.
+	*/
+	pessoa.parar();
+
+	/*
+		E agora: a pessoa ainda está andando? (Use uma instrução para responder está
+		comentários inline ao lado da instrução para mostrar a resposta retornada)
+	*/
+	console.log(pessoa.andando);
+
+	/*
+		Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
+		inline ao lado da instrução para mostrar a resposta retornada)
+	*/
+	console.log(pessoa.caminhouQuantosMetros);
+
+	/*
+		Agora vamos deixar a brincadeira um pouco mais divertida! :D
+		Crie um método para o objeto `pessoa` chamado `apresentacao`. Esse método deve
+		retornar a string:
+		- "Olá, eu sou o [NOME COMPLETO], tenho [IDADE] anos, [ALTURA], meu peso é [PESO] e, só hoje, eu já caminhei [CAMINHOU QUANTOS METROS] metros!"
+
+		Só que, antes de retornar a string, você vai fazer algumas validações:
+		- Se o `sexo` de `pessoa` for "Feminino", a frase acima, no início da
+		apresentação, onde diz "eu sou o", deve mostrar "a" no lugar do "o";
+		- Se a idade for `1`, a frase acima, na parte que fala da idade, vai mostrar a
+		palavra "ano" ao invés de "anos", pois é singular;
+		- Se a quantidade de metros caminhados for igual a `1`, então a palavra que
+		deve conter no retorno da frase acima é "metro" no lugar de "metros".
+		- Para cada validação, você irá declarar uma variável localmente (dentro do
+		método), que será concatenada com a frase de retorno, mostrando a resposta
+		correta, de acordo com os dados inseridos no objeto.
+	*/
+	pessoa.apresentacao = function () {
+		if (pessoa.sexo != 'Masculino')
+			var euSou = 'Olá, Eu Sou A ' + pessoa.nome + ' ' + pessoa.sobrenome;
+		else
+			var euSou = 'Olá, Eu Sou O ' + pessoa.nome + ' ' + pessoa.sobrenome;
+
+		if (pessoa.idade  == 1)
+			var idade = ', Tenho ' + pessoa.idade + ' Ano';
+		else
+			var idade = ', Tenho ' + pessoa.idade + ' Anos';
+
+		if (pessoa.caminhouQuantosMetros == 1)
+			var caminhou = ', Só Hoje, Eu Ja Caminhei ' + pessoa.caminhouQuantosMetros + ' Metro';
+		else
+			var caminhou = ', Só Hoje, Eu Ja Caminhei ' + pessoa.caminhouQuantosMetros + ' Metros';
+
+		console.log(euSou + idade + ', ' + pessoa.altura + ' , Meu Peso É ' + pessoa.peso + ' e' + caminhou);
+	}
+
+	pessoa.apresentacao();
 
 
 })( window, document));
